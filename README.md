@@ -1,1 +1,1 @@
-# This repository is to keep track of my personal development in algorithms and data structures.
+## This repository is to keep track of my personal development in algorithms and data structures.
