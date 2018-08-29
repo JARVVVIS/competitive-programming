@@ -1,5 +1,1 @@
-# competitive-programming
-
-
----
-### This repository is to keep track of personal development in algorithms and data structure area.
+# This repository is to keep track of my personal development in algorithms and data structures.
