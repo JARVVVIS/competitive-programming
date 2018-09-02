@@ -48,5 +48,5 @@ int main(){
     Node *head=input_linked();
     print_rev(head);
     return  0;
+    
 }
-
