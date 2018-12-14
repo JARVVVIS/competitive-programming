@@ -83,15 +83,18 @@ int count_nodes(BinaryTreeNode<int>* root){
     return leftCount+rightCount+1;
 }
 
-bool find_node(BinaryTreeNode<int>* root , int x){
-    if(root == NULL){
-        return false;
-    }
+bool find(BinaryTreeNode<int>* root , int x){
     if(root->data==x){
         return true;
     }
-    return find_node(root->left,x) || find_node(root->right,x);
+    if(root==NULL){
+        return false;
+    }
+    
+    return find(root->left,x) || find(root->right,x);
 }
+
+
 
 
 int height(BinaryTreeNode<int>* root){
@@ -123,7 +126,7 @@ int main(){
     cout<<"Enter the node to be searched ";
     int x;
     cin>>x;
-    cout<<find_node(root,x)<<endl;
+    cout<<find(root,x)<<endl;
     cout<<"Height of tree is: "<<height(root)<<endl;
     mirror(root);
     cout<<"mirrored tree is "<<endl;
