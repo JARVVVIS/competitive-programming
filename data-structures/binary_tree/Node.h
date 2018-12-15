@@ -1,5 +1,3 @@
-//preorder traversal
-// Root L R
 
 #include<iostream>
 #include<queue>
@@ -23,6 +21,7 @@ class Node{
         delete right;
     }
 };
+
 
 
 Node<int>* take_input(){
@@ -58,21 +57,21 @@ Node<int>* take_input(){
         return root;
 }
 
-void preorder(Node<int>* root){
+
+void print(Node<int>* root){
     if(root==NULL){
-        return ;
+        return;
     }
-    cout<<root->data<<" ";
-    preorder(root->left);
-    preorder(root->right);
+    cout<<root->data<<": ";
+    if(root->left!=NULL){
+        cout<<"L:"<<" "<<root->left->data<<" ";
+    }
+    if(root->right!=NULL){
+        cout<<"R:"<<" "<<root->right->data;
+    }
+    cout<<endl;
+    print(root->left);
+    print(root->right);
 }
 
 
-
-
-
-int main(){
-    Node<int>* root = take_input();
-    preorder(root);
-    return 0;
-}

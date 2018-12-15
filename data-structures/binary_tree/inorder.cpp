@@ -1,5 +1,5 @@
-//preorder traversal
-// Root L R
+//inorder traversal
+// L Root R
 
 #include<iostream>
 #include<queue>
@@ -58,21 +58,22 @@ Node<int>* take_input(){
         return root;
 }
 
-void preorder(Node<int>* root){
+void inorder(Node<int>* root){
     if(root==NULL){
         return ;
-    }
-    cout<<root->data<<" ";
-    preorder(root->left);
-    preorder(root->right);
-}
 
+    }
+    inorder(root->left);
+    cout<<root->data<<" ";
+    inorder(root->right);
+}
 
 
 
 
 int main(){
     Node<int>* root = take_input();
-    preorder(root);
+    inorder(root);
+
     return 0;
 }
