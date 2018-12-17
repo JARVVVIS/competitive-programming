@@ -75,3 +75,41 @@ void print(Node<int>* root){
 }
 
 
+void print_level_line(Node<int>* root){
+    if(root==NULL){
+        return ;
+    }
+    queue<Node<int>*> q1;
+    queue<Node<int>*> q2;
+    q1.push(root);
+    while(q1.size()!=0 || q2.size()!=0){
+        while(q1.size()!=0){
+            Node<int>* front = q1.front();
+            cout<<front->data<<" ";
+            if(front->left!=NULL){
+                q2.push(front->left);
+
+            }
+            if(front->right!=NULL){
+                q2.push(front->right);
+            }
+            q1.pop();
+      
+        }
+           cout<<endl;
+         while(q2.size()!=0){
+            Node<int>* front = q2.front();
+            cout<<front->data<<" ";
+            if(front->left!=NULL){
+                q1.push(front->left);
+
+            }
+            if(front->right!=NULL){
+                q1.push(front->right);
+            }
+            q2.pop();
+         
+        }
+           cout<<endl;
+    }
+}
