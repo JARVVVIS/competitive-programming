@@ -5,9 +5,9 @@ using namespace std;
 
 
 
-int sum_child_x(Node<int>* root,int& sum,int child){
+void sum_child_x(Node<int>* root,int& sum,int child){
         if(root==NULL){
-            return 0;
+            return ;
         }
     if ((root->left && root->left->data == child) || 
         (root->right && root->right->data == child)) {
